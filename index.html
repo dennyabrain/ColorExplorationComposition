@@ -1,0 +1,48 @@
+<html>
+	<head>	
+		<title>Visual Language Color Exploration</title>
+	</head>
+	<body>
+		<canvas id="myCanvas" width="1028" height="768" style="padding-left:0;padding-right:0;margin-left:auto;margin-right:auto;display:block;width:1100px;"></canvas>
+		<script>
+			var canvas = document.getElementById("myCanvas");
+			var context = canvas.getContext("2d");
+			var colorCode=["hsla(0,100%,66%,0.5)","hsla(88,100%,66%,0.5)","hsla(171,100%,66%,0.5)"];
+			for(i=0;i<3;i++){
+				context.beginPath();
+				context.arc(300+700*Math.random(),768*Math.random(),100*Math.floor(3*Math.random()),0,Math.PI*2,true);
+				context.closePath();
+				context.fillStyle=colorCode[Math.floor(Math.random()*3)];
+				context.fill();
+			}
+			
+			/*
+			context.beginPath();
+			context.arc(600,300, 200, 0, Math.PI*2, true );
+			context.closePath();
+			context.fillStyle = "hsla(0,100%,66%,1)";
+			context.fill();		
+
+			context.beginPath();
+			context.arc(700,200, 50, 0, Math.PI*2, true );
+                        context.closePath();
+                        context.fillStyle = "hsla(88,100%,66%,1)";
+                        context.fill();
+
+			context.beginPath();
+                        context.arc(400,100, 300, 0, Math.PI*2, true );
+                        context.closePath();
+                        context.fillStyle = "hsla(171,100%,66%,1)";
+                        context.fill();
+			*/
+	
+			var cat = new Image();
+			cat.src = "handImage.png";
+			cat.width = 512;
+			cat.height= 384;
+			cat.onload = function() {
+				context.drawImage(cat, 0, 0);
+			};
+		</script>
+	</body>
+</html>
