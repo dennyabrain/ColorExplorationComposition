@@ -1,33 +1,6 @@
-body{
-	font-size:20px;
-	font-family:Georgia;
-}
-span{
-	padding-bottom:15px;
-}
-#controlBlockWrapper{
-	width:900px;
-	margin-top:20px;
+#mainWrapper{
+	display:block;
 	margin-right:auto;
 	margin-left:auto;
-	display:block;
-}
-
-#hueBlock{
-	width:300px;
-	float:left;
 	text-align:center;
 }
-
-#saturationBlock{
-        width:300px;
-        float:left;
-	text-align:center;
-}
-
-#brightnessBlock{
-        width:300px;
-        float:left;
-	text-align:center;
-}
-
